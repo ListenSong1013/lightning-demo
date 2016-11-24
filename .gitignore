@@ -1,0 +1,12 @@
+test/flow/visuals
+coverage
+node_modules
+npm-debug.log
+dist
+.tmp
+.DS_Store
+.idea
+test-results
+test/visuals
+.happypack
+
