@@ -1,0 +1,1 @@
+webpack本身只打包成两种格式, development或者production，它与执行环境没有关系，两者都应该可以在任何环境下运行
