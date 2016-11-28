@@ -1,7 +1,7 @@
 
 const livechatRoute = {
     path: '/',
-    component: require('components/app'),
+    component: require('containers/app'),
     indexRoute: {
         // onEnter: requireAuth,
         // component: require('./../components_new/livechat/dashboard/dashboard')
