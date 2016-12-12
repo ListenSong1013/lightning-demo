@@ -22,7 +22,7 @@ export default {
     output: {
         filename: '[name]-[hash].js',
         chunkFilename: '[name]-[hash].js',
-        path: path.join(__dirname, '../.tmp'),
+        path: path.join(__dirname, '../dist'),
         publicPath: '/assets/'
     },
     bail: true,
@@ -56,7 +56,7 @@ export default {
     },
     postcss: () => [require('autoprefixer')],
     plugins: [
-        new Clean(['./.tmp'], {
+        new Clean(['./.dist'], {
             verbose: true,
             root: process.cwd()
         }),

@@ -5,6 +5,7 @@
     "add-module-exports",
     "transform-class-properties",
     "transform-react-display-name",
+    "transform-decorators-legacy",
     "react-hot-loader/babel"
   ]
 }

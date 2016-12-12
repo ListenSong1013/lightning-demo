@@ -9,7 +9,6 @@ import moment from 'moment';
 moment.locale('zh-cn');
 
 (async() => {
-    // load routes after int-polyfill
     const routes = require('./routes');
 
     let createElement = (Component, props) => {
@@ -34,10 +33,11 @@ moment.locale('zh-cn');
 
     ReactDOM.render(
         <Provider store={store}>
-            <Router history={history}
-                    onUpdate={urlUpdate}
-                    routes={routes}
-                    createElement={createElement} />
+            <Router
+                routes={routes}
+                history={history}
+                onUpdate={() => {}}
+                createElement={createElement} />
         </Provider>,
-        document.getElementById('meiqiaApp'));
+        document.getElementById('App'));
 })();

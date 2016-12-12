@@ -1,8 +1,4 @@
 /**
- * Created by yixi on 3/17/16.
- */
-
-/**
  * action生成器, 使用:
  * let addAction = createAction('ADD', 'id') 等同与 function addAction(id){ return {type: 'ADD', id: id} }
  * @param type

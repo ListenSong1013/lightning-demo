@@ -2,6 +2,8 @@ import I from 'immutable';
 import { combineReducers } from 'redux-immutable';
 import { LOCATION_CHANGE } from 'react-router-redux';
 
+import list from './list';
+
 let initialState = I.fromJS({
     locationBeforeTransitions: undefined
 });
@@ -17,5 +19,6 @@ let router = (state = initialState, action) => {
 };
 
 export default combineReducers({
-    router
+    router,
+    list
 });

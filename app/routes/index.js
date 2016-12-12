@@ -1,18 +1,16 @@
 
-const livechatRoute = {
+const indexRoute = {
     path: '/',
-    component: require('containers/app'),
+    component: require('components/app'),
     indexRoute: {
-        // onEnter: requireAuth,
-        // component: require('./../components_new/livechat/dashboard/dashboard')
+        onEnter: () => {},
+        component: require('../components/list/index')
     },
     childRoutes: []
 };
 
-const router = {
+export default {
     childRoutes: [
-        livechatRoute
+        indexRoute
     ]
 };
-
-export default router;
