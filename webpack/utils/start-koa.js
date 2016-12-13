@@ -7,6 +7,12 @@ let started;
 let serverReload;
 const SERVER_PATH = path.join(__dirname, '../../server/index');
 
+const filter = (pattern, fn) => filename => {
+    if (pattern.test(filename)) {
+        fn(filename);
+    }
+}
+
 const startServer = () => {
     // merge env for the new process
     const env = Object.assign({
@@ -26,7 +32,9 @@ const startServer = () => {
                 started = true;
                 // Start watcher on server files
                 // and reload browser on change
-                watch(path.join(__dirname, '../../server/'), (file) => {
+                watch(
+                    path.join(__dirname, '../../server/'),
+                    filter(/\.js|.html$/, (file) => {
                         console.log('watch file:', file);
                         if (!file.match('webpack-stats.json')) {
                             console.log('restarting koa application');
@@ -34,7 +42,7 @@ const startServer = () => {
                             server.kill('SIGTERM');
                             return startServer();
                         }
-                    }
+                    })
                 );
             }
         }
