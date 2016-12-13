@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
+import style from 'styles/modules/list.css';
 import { requestFetchList } from 'redux/reducers/list';
 
 @connect(
@@ -22,7 +23,7 @@ export default class List extends Component {
 
     render() {
         return (
-            <div id="list">
+            <div id={style.list}>
                 <ul>
                     {this._renderList()}
                 </ul>

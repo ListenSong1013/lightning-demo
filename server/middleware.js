@@ -56,7 +56,7 @@ export default {
                 match: /^\/assets\//
             })));
         } else {
-            app.use(convert(mount('/assets', staticCache(path.join(__dirname, '../../dist'), {}))));
+            app.use(convert(mount('/assets', staticCache(path.join(__dirname, '../dist'), {}))));
         }
     }
 };

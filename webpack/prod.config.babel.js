@@ -31,6 +31,9 @@ export default {
             test: /\.json$/,
             loader: 'json-loader'
         }, {
+            test: /\.(woff|eot|ttf)$/,
+            loader: 'url-loader?limit=1&name=[sha512:hash:base64:7].[ext]'
+        }, {
             test: /\.(jpe?g|png|gif|ogg|mp3)$/,
             exclude: /public/,
             loaders: [
@@ -41,11 +44,10 @@ export default {
             test: /\.js$|.jsx$/,
             exclude: [/node_modules/, /public/],
             loader: 'happypack/loader?id=jsx'
-        }, { //for sass-modules
-            test: /\.scss$|.css$/,
-            include: [path.join(__dirname, '../app/styles/modules'),
-                      path.join(__dirname, '../app/libs/editor')],
-            loader: extractModuleCss.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader!sass-loader?outputStyle=expanded&includePaths[]=' + encodeURIComponent(path.join(__dirname, '../app/styles')))
+        }, { //for css-modules
+            test: /\.css$/,
+            include: [path.join(__dirname, '../app/styles')],
+            loader: extractModuleCss.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader?outputStyle=expanded&includePaths[]=' + encodeURIComponent(path.join(__dirname, '../app/styles')))
         }, { // for font
             test: /\.(ttf|eot|woff(?:2)?)(\?[a-z0-9]+)?$/,
             loader: "url-loader?limit=1&minetype=application/font-woff"

@@ -1,0 +1,70 @@
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html,
+body {
+    font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+    height: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-size: 14px;
+    line-height: 1.42857143;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    color: #969faa;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover,
+    &:active {
+        color: #969faa;
+        text-decoration: none;
+    }
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 500;
+    color: inherit;
+}
+
+ul,
+ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+label,
+input,
+select,
+textarea,
+button {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+/* 针对老版本 IE 的提示条 */
+.browsehappy {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    padding: 7px 10px;
+    background-color: $orange;
+    opacity: .95;
+    filter: Alpha(opacity=90);
+}

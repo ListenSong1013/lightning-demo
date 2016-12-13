@@ -53,15 +53,15 @@ export default {
                 loader: 'json-loader'
             }, {
                 test: /\.(jpe?g|png|gif|ogg|mp3)$/,
-                exclude: '../server/public',
+                exclude: [/public/],
                 loader: 'url-loader?limit=1&name=[sha512:hash:base64:7].[ext]'
             }, {
                 test: /\.js$|.jsx$/,
                 exclude: [/node_modules/, /public/],
                 loaders: ['happypack/loader?id=jsx']
             }, {
-                test: /\.scss$|.css$/,
-                include: [path.join(__dirname, '../app/styles/modules')],
+                test: /\.css$/,
+                include: [path.join(__dirname, '../app/styles')],
                 loaders:  ['happypack/loader?id=moduleCss']
             }, { // for font
                 test: /\.(ttf|eot|woff(?:2)?)(\?[a-z0-9]+)?$/,

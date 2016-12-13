@@ -1,6 +1,8 @@
 import _ from 'lodash';
 import React, { Component, PropTypes } from 'react';
 
+require('styles/global/style.css');
+
 export default class App extends Component {
     static propTypes = {
         children: PropTypes.object.isRequired

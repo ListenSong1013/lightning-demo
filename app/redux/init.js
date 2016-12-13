@@ -5,7 +5,7 @@ import { browserHistory } from 'react-router';
 import { routerMiddleware } from 'react-router-redux';
 import { createStore, compose, applyMiddleware } from 'redux';
 
-import asyncAction from './middleware/asyncAction';
+import asyncAction from './middleware/async-action';
 
 export default function create(initState = I.Map()) {
     const middlware = [asyncAction, routerMiddleware(browserHistory)];
