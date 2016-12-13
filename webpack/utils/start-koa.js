@@ -26,8 +26,8 @@ const startServer = () => {
                 started = true;
                 // Start watcher on server files
                 // and reload browser on change
-                watch(
-                    SERVER_PATH, (file) => {
+                watch(path.join(__dirname, '../../server/'), (file) => {
+                        console.log('watch file:', file);
                         if (!file.match('webpack-stats.json')) {
                             console.log('restarting koa application');
                             serverReload = true;
