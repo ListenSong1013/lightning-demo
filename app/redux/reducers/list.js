@@ -31,7 +31,7 @@ let defaultState = I.fromJS([
 
 export default createReducer(I.fromJS(defaultState), {
     [FETCH_LIST_DATA_SUCCESS](state, action) {
-        return I.fromJS(saction.result);
+        return I.fromJS(action.result);
     }
 });
 

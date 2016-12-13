@@ -6,3 +6,4 @@ let actions = [
 const _actions = {};
 actions.forEach((action) => _actions[action] = action);
 export default _actions;
+
