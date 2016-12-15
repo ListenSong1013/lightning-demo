@@ -11,7 +11,7 @@ R.init(app);
 
 app.listen(port);
 app.on('error', err => console.log('ERROR-->', err));
-console.log(`Application ecoboost started on port: ${port}`);
+console.log(`Application started on port: ${port}`);
 
 if (process.send) {
     process.send('online');

@@ -5,7 +5,7 @@ import HappyPack from 'happypack';
 import writeStats from './utils/write-stats';
 import startKoa from './utils/start-koa';
 
-// 只是开发工具运行的端口(devserver)，不是ecoboost/server
+// 只是开发工具运行的端口(devserver)
 const HOST = 'localhost';
 const PORT = 8000;
 
